@@ -110,6 +110,13 @@
         window.close();
     });
 
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('mouseover', () => {
+        currentIndex = i;
+        buttons[i].focus();
+      })
+    }
+
     btn_back.focus();
 
     document.addEventListener('keydown', (e) => {
