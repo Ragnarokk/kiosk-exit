@@ -128,7 +128,13 @@
         buttons[currentIndex].focus();
       } else if (e.key === 'Enter') {
         buttons[currentIndex].click();
+      } else if (e.key == 'Escape') {
+        window.close();
       }
+    });
+
+    document.addEventListener('click', () => {
+      buttons[currentIndex].click();
     });
 
     function pageSetup() {
